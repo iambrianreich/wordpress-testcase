@@ -37,6 +37,12 @@ class HasActionHandlerRegisteredConstraintTest extends TestCase
         $this->assertTrue((new HasActionHandlerRegisteredConstraint($actionName))->matches($handler));
     }
 
+    /**
+     * Verifies that matches() returns false when an action with the confgured
+     * name does not have a matching handler registered.
+     *
+     * @return void
+     */
     public function testConstraintReturnsFalseWhenActionHandlerIsNotRegistered()
     {
         $actionName = 'actionJackson';
@@ -44,5 +50,19 @@ class HasActionHandlerRegisteredConstraintTest extends TestCase
 
         $this->assertFalse(has_action($actionName, $handler));
         $this->assertFalse((new HasActionHandlerRegisteredConstraint($actionName))->matches($handler));
+    }
+
+    /**
+     * Verifies that toString() returns the expected string pattern.
+     *
+     * @return void
+     */
+    public function testToString()
+    {
+        $actionName = 'actionJackson';
+        $handler = fn () => 13;
+
+        $constraint = new HasActionHandlerRegisteredConstraint($actionName);
+        $this->assertEquals(sprintf(HasActionHandlerRegisteredConstraint::TO_STRING_TEMPLATE, $actionName), $constraint->toString());
     }
 }
