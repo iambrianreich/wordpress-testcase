@@ -1,0 +1,23 @@
+{
+    "name": "iambrianreich/wordpress-testcase",
+    "description": "A PHPUnit TestCase and Constraints for the lazy tester",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Reich",
+            "email": "brian@brianreich.dev"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "BR\\": "src/"
+        }
+    },
+    "require": {
+        "php": "~8",
+        "phpunit/phpunit": "^9.6",
+        "squizlabs/php_codesniffer": "*",
+        "yoast/phpunit-polyfills": "^1.0"
+    }
+}
