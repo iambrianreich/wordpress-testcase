@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file contains BR\WordPress\PHPUnit\HasActionConstraint.
+ * This file contains BR\WordPress\TestCase\PHPUnit\HasActionConstraint.
  *
  * @author Brian Reich <brian@brianreich.dev>
  * @copyright MIT
@@ -72,7 +72,7 @@ class HasActionHandlerRegisteredConstraint extends Constraint
      */
     public function toString(): string
     {
-        return sprintf(self::TO_STRING_TEMPLATE, $this->action);
+        return sprintf(static::TO_STRING_TEMPLATE, $this->action);
     }
 
     #endregion Constraint Methods
