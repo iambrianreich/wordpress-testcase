@@ -31,7 +31,7 @@ class PostTypeExistsConstraintTest extends TestCase
         $this->assertTrue((new PostTypeExistsConstraint())->matches($postType));
     }
     /**
-     * Verifies that matches() 
+     * Verifies that matches()
      *
      * @return void
      */

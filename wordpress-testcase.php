@@ -2,7 +2,7 @@
 
 /**
  * WordPress TestCase
- * 
+ *
  * WordPress TestCase is not a plugin. It is a library that provides custom
  * constraints and test cases for making unit testing WordPress a little less
  * painful.
